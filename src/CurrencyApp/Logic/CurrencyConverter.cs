@@ -4,7 +4,7 @@ namespace CurrencyApp.Logic;
 
 public class CurrencyConverter
 {
-    private Dictionary<string, decimal> _ratesPerUsd = new()
+    private readonly Dictionary<string, decimal> _ratesPerUsd = new()
     {
         { "USD", 1m },
         { "NGN", 1500m },
@@ -20,17 +20,17 @@ public class CurrencyConverter
     public IEnumerable<string> SupportedCurrencies => _ratesPerUsd.Keys;
 
     public ConversionRecord Convert(decimal amount, string fromCurrency, string toCurrency)
-{
-    decimal rate = _ratesPerUsd[toCurrency] / _ratesPerUsd[fromCurrency];
+    {
+        decimal rate = _ratesPerUsd[toCurrency] / _ratesPerUsd[fromCurrency];
 
-    return new ConversionRecord
-{
-    Timestamp = DateTime.Now,
-    FromCurrency = fromCurrency,
-    ToCurrency = toCurrency,
-    Amount = amount,
-    Rate = rate,
-    Result = Math.Round(amount * rate, 2)
-};
-}
+        return new ConversionRecord
+        {
+            Timestamp = DateTime.Now,
+            FromCurrency = fromCurrency,
+            ToCurrency = toCurrency,
+            Amount = amount,
+            Rate = rate,
+            Result = Math.Round(amount * rate, 2)
+        };
+    }
 }
