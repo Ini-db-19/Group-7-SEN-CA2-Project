@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="b5nEPEzYcTwmZPnzwdIb">
+    <mxGraphModel dx="1221" dy="857" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1B1F24;" value="Architecture Diagram - Three Layers" vertex="1">
+          <mxGeometry height="36" width="520" x="40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="L1" parent="1" style="swimlane;startSize=30;fillColor=#F7F8FA;strokeColor=#D5DAE1;fontSize=14;fontStyle=1;fontColor=#1B1F24;html=1;" value="Console UI Layer" vertex="1">
+          <mxGeometry height="130" width="560" x="40" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="prog" parent="L1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="Program.cs&lt;br&gt;&lt;small&gt;menu, input and output&lt;/small&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" parent="1" style="swimlane;startSize=30;fillColor=#F7F8FA;strokeColor=#D5DAE1;fontSize=14;fontStyle=1;fontColor=#1B1F24;html=1;" value="Business Logic Layer" vertex="1">
+          <mxGeometry height="240" width="560" x="40" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="L2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="ConversionService&lt;br&gt;&lt;small&gt;coordinates validation, conversion and history&lt;/small&gt;" vertex="1">
+          <mxGeometry height="70" width="240" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conv" parent="L2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="CurrencyConverter&lt;br&gt;&lt;small&gt;converts using rates&lt;/small&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="valid" parent="L2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="InputValidator&lt;br&gt;&lt;small&gt;checks user input&lt;/small&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="310" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="L2" source="svc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A94A6;fontSize=12;endArrow=classic;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="conv" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="L2" source="svc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A94A6;fontSize=12;endArrow=classic;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="valid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" parent="1" style="swimlane;startSize=30;fillColor=#F7F8FA;strokeColor=#D5DAE1;fontSize=14;fontStyle=1;fontColor=#1B1F24;html=1;" value="Data Storage Layer" vertex="1">
+          <mxGeometry height="130" width="560" x="40" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="store" parent="L3" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="JsonStorage&lt;br&gt;&lt;small&gt;SaveRecord, LoadHistory, ClearHistory&lt;/small&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="file" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=14;fillColor=#F3EEFF;strokeColor=#B9A6F0;fontColor=#1B1F24;" value="history.json" vertex="1">
+          <mxGeometry height="70" width="120" x="270" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="L1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A94A6;fontColor=#5A626E;fontSize=12;endArrow=classic;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;" target="L2" value="calls">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="L2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A94A6;fontColor=#5A626E;fontSize=12;endArrow=classic;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;" target="L3" value="save / load">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="store" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A94A6;fontColor=#5A626E;fontSize=12;endArrow=classic;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;" target="file" value="reads / writes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

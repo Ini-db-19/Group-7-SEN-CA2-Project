@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Gbcl-Sz7L7Bsh8qZkj--">
+    <mxGraphModel dx="1027" dy="721" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1B1F24;" value="Use Case Diagram - Currency Converter" vertex="1">
+          <mxGeometry height="36" width="520" x="60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=14;fontColor=#1B1F24;strokeColor=#8A94A6;fillColor=#EEF4FF;labelPerimeter=1;" value="User" vertex="1">
+          <mxGeometry height="60" width="30" x="100" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="swimlane;startSize=30;fillColor=#F7F8FA;strokeColor=#D5DAE1;fontSize=14;fontStyle=1;fontColor=#1B1F24;html=1;" value="Currency Converter System" vertex="1">
+          <mxGeometry height="500" width="490" x="200" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="Select Currencies" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="Enter Amount" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="Convert" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="View History" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#EEF4FF;strokeColor=#9DB8F2;fontColor=#1B1F24;" value="Clear History" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" parent="boundary" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#FFF0E5;strokeColor=#F0B48A;fontColor=#1B1F24;" value="Validate Input" vertex="1">
+          <mxGeometry height="60" width="160" x="290" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="inc" edge="1" parent="boundary" source="uc3" style="dashed=1;endArrow=open;endSize=10;html=1;strokeColor=#8A94A6;fontColor=#5A626E;fontSize=12;labelBackgroundColor=default;defaultLabelBackgroundColor=page;verticalAlign=bottom;labelPlacement=auto;" target="uc6" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="actor" style="endArrow=none;html=1;strokeColor=#8A94A6;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="uc1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="actor" style="endArrow=none;html=1;strokeColor=#8A94A6;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="uc2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="actor" style="endArrow=none;html=1;strokeColor=#8A94A6;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="uc3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="actor" style="endArrow=none;html=1;strokeColor=#8A94A6;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="uc4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="actor" style="endArrow=none;html=1;strokeColor=#8A94A6;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" target="uc5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#5A626E;" value="Validate Input is included in Convert: every conversion checks the input first." vertex="1">
+          <mxGeometry height="24" width="490" x="200" y="572" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
